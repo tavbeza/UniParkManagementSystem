@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="UniParkDB">
+  <DataContextMoniker Name="/UniParkDBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="eb5f905c-4e5e-4fdd-a5d1-73ac5630e2ae" absoluteBounds="0.75, 0.875, 2, 1.9631982421875">
+      <DataClassMoniker Name="/UniParkDBDataContext/TblVehicle" />
+      <nestedChildShapes>
+        <elementListCompartment Id="952bdb6f-a212-4e44-a5d9-33de16929048" absoluteBounds="0.765, 1.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e880bde2-6b85-444c-85de-cd934eff80b7" absoluteBounds="3.5, 1.125, 2, 1.5785953776041664">
+      <DataClassMoniker Name="/UniParkDBDataContext/TblLot" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b98a6289-fb5f-4322-980d-b59c81633bd0" absoluteBounds="3.515, 1.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 1.91429768880208); (3.5 : 1.91429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/UniParkDBDataContext/TblVehicle/TblVehicle_TblLot" />
+      <nodes>
+        <classShapeMoniker Id="eb5f905c-4e5e-4fdd-a5d1-73ac5630e2ae" />
+        <classShapeMoniker Id="e880bde2-6b85-444c-85de-cd934eff80b7" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

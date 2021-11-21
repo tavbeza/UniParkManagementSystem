@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="UniPark" Class="UniParkDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=UniPark;Integrated Security=True" SettingsObjectName="UniParkManagementSystem.Properties.Settings" SettingsPropertyName="UniParkConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.TblVehicles" Member="TblVehicles">
+    <Type Name="TblVehicle">
+      <Column Name="LicensePlateId" Type="System.String" DbType="Char(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="VehicleType" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
+      <Column Name="VehicleHeight" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="VehicleWidth" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="VehicleLength" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[User]" Member="User" Type="System.String" DbType="Char(30) NOT NULL" CanBeNull="false" />
+      <Association Name="TblVehicle_TblLot" Member="TblLots" ThisKey="LicensePlateId" OtherKey="VehicleLicensePlateId" Type="TblLot" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TblLots" Member="TblLots">
+    <Type Name="TblLot">
+      <Column Name="LodId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TimeLimit" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CheckInTime" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="VehicleLicensePlateId" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Association Name="TblVehicle_TblLot" Member="TblVehicle" ThisKey="VehicleLicensePlateId" OtherKey="LicensePlateId" Type="TblVehicle" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
